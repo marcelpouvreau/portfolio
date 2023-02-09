@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #e0ebeb;
+}
+
+body
+{
+  background-image: url("../images/fireworks.jpg");
+  height: 100%;
+}
+
+.main-home
+{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+
+.home-article
+{
+  margin: 1rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  text-align: center;
+  background: #002c6a;
+  border-radius: 5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  opacity: 75%;
+}
+
+main img{
+  width: 100%;  
+  align-items: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.text-main p
+{
+  font-size: 20px;
+}
+
+div h3
+{
+  margin-top: 2rem;
+  padding-bottom: .5rem;
+  font-size: 2rem;
+}
+
+
+.footer-container
+{
+  display: flex;  
+  align-items: center;
+  justify-content: space-around;
+}
+
+.copyright
+{
+  color: black;
+}
+
+.network-container
+{
+  display: flex;
+  align-items: center;
+}
+
+.icons
+{
+  color: #e0ebeb;
+  width: 2rem;
+  margin-left: 1rem;
+  filter: invert(14%) sepia(23%) saturate(6938%) hue-rotate(203deg) brightness(91%) contrast(105%);
+}

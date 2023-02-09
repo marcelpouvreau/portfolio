@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}POUVREAU Marcel Portfolio{% endblock %}
+
+{% block body %}
+
+<main class="work-container">
+
+    {{ form_start(worksForm, {'attr': {'class': 'work-form'}}) }}
+    {{ form_row(worksForm.worksName, {'attr': {'class': 'work-name'}}) }}
+    {{ form_row(worksForm.url, {'attr': {'class': 'work-url'}}) }}
+    {{ form_widget(worksForm.save, {'attr': {'class': 'button-save-work'}}) }}
+    {{ form_end(worksForm) }}
+</main>
+
+{% endblock %}

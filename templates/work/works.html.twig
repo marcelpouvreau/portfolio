@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}POUVREA Marcel Works{% endblock %}
+
+{% block body %}
+    {# {% if is_granted('ROLE_USER') %} #}
+    <a href="{{ path('app_works_form') }}" class="btn btn-dark mb-3">Adicionar</a>
+    {# {% endif %} #}
+
+<div class="">
+    {% for works in worksList %}
+        <li>
+            {# {% if is_granted('ROLE_USER') %}  #}
+            <p class="">
+            {# {% endif %} #}
+                {{ works.name }}
+            {# {% if is_granted('ROLE_USER') %}  #}
+            </p> 
+            {# {% endif %} #}
+            <a href="#">
+                {{ works.url }}
+            </a>
+
+            <div class="">
+                <a href="{{ path('app_edit_works_form', {works: works.id}) }}" class="">
+                    E
+                </a>
+                <form method="post" action="{{ path('app_delete_works', {id: works.id}) }}">
+                    <input type="hidden" name="_method" value="DELETE">
+
+                    <button class="">
+                        X
+                    </button>
+                </form>
+            </div>
+        </li>
+        {% endfor %}
+</div>
+{% endblock %}
