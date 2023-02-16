@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
 *{
   list-style: none;
@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   color: #e0ebeb;
+  font-family: 'Karla', sans-serif;
 }
 
 body
@@ -24,17 +25,17 @@ body
 
 .home-article
 {
-  margin: 1rem;
+  margin: 2rem;
   margin-left: 15rem;
   margin-right: 15rem;
   text-align: center;
-  background: #002c6a;
-  border-radius: 5rem;
+  background: #1e3a50;
   padding-top: 0.2rem;
   padding-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  opacity: 75%;
+  opacity: 85%;
+  line-height: 1.5;
 }
 
 main img{
@@ -62,11 +63,13 @@ div h3
   display: flex;  
   align-items: center;
   justify-content: space-around;
+  background-color: #01253d;
+  padding: 1rem;
 }
 
 .copyright
 {
-  color: black;
+  color: white;
 }
 
 .network-container
@@ -80,5 +83,5 @@ div h3
   color: #e0ebeb;
   width: 2rem;
   margin-left: 1rem;
-  filter: invert(14%) sepia(23%) saturate(6938%) hue-rotate(203deg) brightness(91%) contrast(105%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(9deg) brightness(105%) contrast(103%);
 }

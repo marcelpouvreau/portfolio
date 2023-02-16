@@ -1,0 +1,51 @@
+.btn-addNew-work
+{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: #ff7c00;
+  padding: .5rem;
+  border-radius: 10%;
+  margin: 5rem;
+}
+
+.works-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.works-p
+{
+  text-align: center;
+}
+
+.options-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.edit-btn
+{
+  color: black;
+  background-color: #eee8aa;
+  border-radius: 10px;
+  padding: 5px;
+  border: #eee8aa;
+}
+
+.delete-btn
+{
+  color: black;
+  background: #ff7c00;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+  border: #ff7c00;
+}

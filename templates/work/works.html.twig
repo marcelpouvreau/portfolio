@@ -3,37 +3,40 @@
 {% block title %}POUVREA Marcel Works{% endblock %}
 
 {% block body %}
-    {# {% if is_granted('ROLE_USER') %} #}
-    <a href="{{ path('app_works_form') }}" class="btn btn-dark mb-3">Adicionar</a>
-    {# {% endif %} #}
+<div class="container">
+    <div>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_works_form') }}" class="btn-addNew-work">Adicionar</a>
+        {% endif %}
+    </div>
 
-<div class="">
-    {% for works in worksList %}
-        <li>
-            {# {% if is_granted('ROLE_USER') %}  #}
-            <p class="">
-            {# {% endif %} #}
-                {{ works.name }}
-            {# {% if is_granted('ROLE_USER') %}  #}
-            </p> 
-            {# {% endif %} #}
-            <a href="#">
-                {{ works.url }}
-            </a>
-
-            <div class="">
-                <a href="{{ path('app_edit_works_form', {works: works.id}) }}" class="">
-                    E
+    <div class="works-container">
+        {% for works in worksList %}
+            <li>
+                <p class="works-p">
+                    {{ works.name }}
+                </p> 
+                <a href="#">
+                    {{ works.url }}
                 </a>
-                <form method="post" action="{{ path('app_delete_works', {id: works.id}) }}">
-                    <input type="hidden" name="_method" value="DELETE">
+                <img src="{{ asset('images/fireworks.jpg')}}">
+                    {{ works.image }}
+                </img>
 
-                    <button class="">
-                        X
-                    </button>
-                </form>
-            </div>
-        </li>
+                <div class="options-container">
+                    <a href="{{ path('app_edit_works_form', {works: works.id}) }}" class="edit-btn">
+                        E
+                    </a>
+                    <form method="post" action="{{ path('app_delete_works', {id: works.id}) }}">
+                        <input type="hidden" name="_method" value="DELETE">
+
+                        <button class="delete-btn">
+                            X
+                        </button>
+                    </form>
+                </div>
+            </li>
         {% endfor %}
+    </div>
 </div>
 {% endblock %}

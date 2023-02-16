@@ -1,16 +1,21 @@
-.menu-ul
-{
+.header-container {
+  background-color: #01253d;
+  padding: 1rem;
+}
+.menu-ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px;
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
-.links-menu
-{
-  background: #002c6a;
-  padding: 8px;
+.links-menu {
+  background: #b49d7c;
+  padding: 10px 10px;
   border-radius: 10px;
+  width: 90px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
 }

@@ -1,0 +1,52 @@
+.resume-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-link
+{
+  background: #b8860b;
+  padding: .3rem;
+  border-radius: 5px;
+  color: black;
+}
+
+.downloadMe
+{
+  text-align: center;
+}
+
+.img-container 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+.resume-img 
+{
+  border: 5px solid #b8860b;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  width: 100%;
+  margin: 50px;
+}
+
+.resume-options 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}

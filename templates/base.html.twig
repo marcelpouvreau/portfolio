@@ -2,11 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Marcel Pouvreau{% endblock %}</title>
         <link rel="stylesheet" href={{asset("css/headerFooterStyle.css")}} >
         <link rel="stylesheet" href={{asset("css/reset.css")}} >
         <link rel="stylesheet" href={{asset("css/homePage.css")}} >
         <link rel="stylesheet" href={{asset("css/index.css")}} >
+        <link rel="stylesheet" href={{asset("css/resume.css")}} >
+        <link rel="stylesheet" href={{asset("css/works.css")}} >
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
         {% endblock %}
@@ -15,15 +17,15 @@
         {% endblock %}
     </head>
         <body>
-                <header class="">
+                <header class="header-container">
                     <ul class="menu-ul">
-                        <li class="links-menu"><a href="{{ path('app_home', {slut: 'Marcel-Pouvreau-portfolio'}) }}">Home</a></li>
+                        <li class="links-menu"><a href="{{ path('app_home') }}">Home</a></li>
                         <li class="links-menu"><a href="{{ path('app_works')}}">Works</a></li>
-                        <li class="links-menu"><a href="#">Resume</a></li>
-                        <li class="links-menu"><a href="#">About me</a></li>
+                        <li class="links-menu"><a href="{{ path('app_resume_list')}}">Resume</a></li>
+                        <li class="links-menu"><a href="#">Skills</a></li>
                         {% if is_granted('ROLE_ADMIN') %}
-                            <li class="links-menu"><a href="#">Logout</a></li>
-                            <li class="links-menu"><a href="{{ path('app_works_form')}}">AddWork</a></li>
+                            <li class="links-menu"><a href="{{ path('app_logout') }}">Logout</a></li>
+                            <li class="links-menu"><a href="{{ path('app_add_works')}}">AddWork</a></li>
                         {% endif %}
                     </ul>
                 </header>

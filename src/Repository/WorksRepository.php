@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\DTO\WorksCreateFromInput;
 use App\Entity\Works;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -21,7 +22,7 @@ class WorksRepository extends ServiceEntityRepository
         parent::__construct($registry, Works::class);
     }
 
-    public function save(Works $entity, bool $flush = false): void
+    public function add(Works $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -37,6 +38,12 @@ class WorksRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function removeById(int $id): void
+    {
+        $works = $this->getEntityManager()->getPartialReference(Works::class, $id);
+        $this->remove($works, true);
     }
 
 //    /**

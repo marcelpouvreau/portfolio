@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\DTO;
 
-class WorksCreateFromInput
+class ResumeCreateFormInut
 {
     public function __construct(
-      public string $worksName = '',
-      public string $url = '',
+      public string $resumeName = '',
+      public string $file = '',
     )
     {
       

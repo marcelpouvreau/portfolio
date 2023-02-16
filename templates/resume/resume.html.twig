@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}POUVREA Marcel Works{% endblock %}
+
+{% block body %}
+<div class="">
+    <div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_resume_form') }}" class="btn-addNew-work">Adicionar</a>
+    </div>
+    {% endif %}
+
+    <div class="resume-container">
+        {% for resume in resumeList %}
+            <div>
+                <div class="img-container">
+                    <img class="resume-img" src="{{ asset('Uploads/CV Marcel - DEVELOPPEUR WEB.jpg')}}" alt="{{ resume.name }}" />
+                </div>
+                <div class="download-container">
+                    <a class="download-link" href="{{ path('app_download_resume', {id: resume.id}) }}">
+                        {{ resume.name }} <p class="downloadMe">(Download-me!)</p>
+                    </a> 
+                </div>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <div class="resume-options">
+                        <a href="{{ path('app_edit_resume_form', {resume: resume.id}) }}" class="edit-btn">
+                            E
+                        </a>
+                        <form method="post" action="{{ path('app_delete_resume', {id: resume.id}) }}">
+                            <input type="hidden" name="_method" value="DELETE">
+
+                            <button class="delete-btn">
+                                X
+                            </button>
+                        </form>
+                    </div>
+                {% endif %}
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
