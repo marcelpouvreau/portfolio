@@ -1,0 +1,55 @@
+.contact-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.contact-container h1
+{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container-contact-form
+{
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-input
+{
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-content
+{
+  height: 100px;
+  width: 250px;
+}
+.contact-container div .required
+{
+  display: none;
+}
+
+.send-btn
+{
+  color: black;
+  padding: .25rem;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.send-btn:hover
+{
+  color: white;
+  font-size: large;
+  border: white solid 1px;
+  background: green;
+  cursor: pointer;
+}

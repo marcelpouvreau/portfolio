@@ -9,6 +9,9 @@
         <link rel="stylesheet" href={{asset("css/index.css")}} >
         <link rel="stylesheet" href={{asset("css/resume.css")}} >
         <link rel="stylesheet" href={{asset("css/works.css")}} >
+        <link rel="stylesheet" href={{asset("css/skills.css")}} >
+        <link rel="stylesheet" href={{asset("css/contact.css")}} >
+        <link rel="stylesheet" href={{asset("css/login.css")}} >
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
         {% endblock %}
@@ -17,24 +20,24 @@
         {% endblock %}
     </head>
         <body>
-                <header class="header-container">
-                    <ul class="menu-ul">
-                        <li class="links-menu"><a href="{{ path('app_home') }}">Home</a></li>
-                        <li class="links-menu"><a href="{{ path('app_works')}}">Works</a></li>
-                        <li class="links-menu"><a href="{{ path('app_resume_list')}}">Resume</a></li>
-                        <li class="links-menu"><a href="#">Skills</a></li>
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <li class="links-menu"><a href="{{ path('app_logout') }}">Logout</a></li>
-                            <li class="links-menu"><a href="{{ path('app_add_works')}}">AddWork</a></li>
-                        {% endif %}
-                    </ul>
-                </header>
-                {% block body %}
+            <header class="header-container">
+                <ul class="menu-ul">
+                    <li class=""><a class="header-links" href="{{ path('app_home') }}">Home</a></li>
+                    <li class=""><a class="header-links" href="{{ path('app_works')}}">Works</a></li>
+                    <li class=""><a class="header-links" href="{{ path('app_resume_list')}}">Resume</a></li>
+                    <li class=""><a class="header-links" href="{{ path('app_skills')}}">Skills</a></li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class=""><a class="header-links" href="{{ path('app_logout') }}">Logout</a></li>
+                        <li class=""><a class="header-links" href="{{ path('app_add_works')}}">AddWork</a></li>
+                    {% endif %}
+                </ul>
+            </header>
+            {% block body %}
 
-                {% endblock %}                
-                <div class="footer-container">
-                        <a href="#">Contactez-moi</a>
-                        <p class="copyright">© Marcel Pouvreau, 2023</p>
+            {% endblock %}                
+            <div class="footer-container">
+                    <a href="#{#{{ path('app_contact')}}#}">Contact me</a>
+                    <p class="copyright">© Marcel Pouvreau, 2023</p>
 
                     <div class="network-container">
                         <a href="https://github.com/marcelpouvreau"><img class="icons" src="{{ asset ("images/github.png")}}" alt="Marcel Pouvreau github Link"></a>

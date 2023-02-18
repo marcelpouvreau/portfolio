@@ -4,25 +4,27 @@
 
 {% block body %}
 <div class="container">
-    <div>
         {% if is_granted('ROLE_ADMIN') %}
         <a href="{{ path('app_works_form') }}" class="btn-addNew-work">Adicionar</a>
         {% endif %}
-    </div>
 
-    <div class="works-container">
         {% for works in worksList %}
-            <li>
-                <p class="works-p">
-                    {{ works.name }}
-                </p> 
-                <a href="#">
-                    {{ works.url }}
-                </a>
-                <img src="{{ asset('images/fireworks.jpg')}}">
+    <div class="works-container">
+                <div class="works-name-link">
+                    <p class="works-p">
+                        {{ works.name }}
+                    </p> 
+                </div>
+                <img class="works-img" src="{{ asset('Uploads/works/my_portfolio.png')}}">
                     {{ works.image }}
                 </img>
-
+                <div class="works-name-link">
+                    <a class="works-a" href="{{ works.url }}">
+                        Link to the site
+                    </a>
+                </div>
+                
+                {% if is_granted('ROLE_ADMIN') %}
                 <div class="options-container">
                     <a href="{{ path('app_edit_works_form', {works: works.id}) }}" class="edit-btn">
                         E
@@ -35,8 +37,8 @@
                         </button>
                     </form>
                 </div>
-            </li>
-        {% endfor %}
+                {% endif %}
     </div>
+        {% endfor %}
 </div>
 {% endblock %}

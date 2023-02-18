@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SkillsController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1 class="skills-h1">Skills</h1>
+    <div class="logos-container">
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/html_logo.png')}}" alt="HTML Logo">
+        </li>
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/css_logo.png')}}" alt="CSS Logo">
+        </li>
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/javascript_logo.png')}}" alt="JavaScript Logo">
+        </li>
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/php_logo.png')}}" alt="PHP Logo">
+        </li>
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/symfony_logo.png')}}" alt="Symfony Logo">
+        </li>
+        <li class="img-skills-container">
+            <img class="logos-img" src="{{ asset('images/react_logo.png')}}" alt="React Logo">
+        </li>
+            
+    </div>
+
+</div>
+{% endblock %}

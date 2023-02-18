@@ -10,12 +10,14 @@
   margin-right: 5rem;
 }
 
-.links-menu {
+.header-links
+{
   background: #b49d7c;
-  padding: 10px 10px;
+  padding: 10px 15px;
   border-radius: 10px;
-  width: 90px;
-  text-align: center;
   font-size: 1.25rem;
+  width: 90px;
   font-weight: bold;
+  text-align: center;
+
 }
